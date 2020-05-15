@@ -1,0 +1,91 @@
+﻿body {
+    font-family: 'Poppins', sans-serif;
+}
+
+li {
+    
+    margin-left: 200px;
+}
+
+.l {
+text-transform:uppercase;
+}
+a:hover{
+text-decoration-color:yellow;
+}
+
+    a:hover {
+        color: red;
+    }
+
+.srcbox {
+    border: 1px solid #FFBC6B;
+    border-radius: 30px;
+    height: 35px;
+    
+
+}
+.srcboox {
+    width: 430%;
+    border: 1px solid #FFBC6B;
+    border-radius: 30px;
+    
+}
+.subnavbar {
+    background-color: #B252FE;
+    /*#FFBC6B;*/
+}
+
+.srcboxx{
+    border: 1px solid #FFBC6B;
+    border-radius: 30px;
+    width: 705px;
+
+}
+
+
+/*search box*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
+    height: 40%;
+}
+
+.searchTerm {
+    width: 100%;
+    border: 3px solid orange;
+    border-right: none;
+    padding: 5px;
+    height: 40px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+    text-align:center;
+}
+
+
+.searchButton {
+    width: 40px;
+ 
+    border: 1px solid #00B4CC;
+    background: #00B4CC;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap {
+    width: 80%;
+  
+    position: absolute;
+    top: 23%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

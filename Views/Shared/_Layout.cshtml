@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] Ghardailo</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm   subnavbar">
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <i class="fa fa-phone"> +977 9867826013 <i class=" ml-2  fa fa-facebook"></i> <i class="ml-3 fa fa-instagram"></i> <i class="ml-3 fa fa-twitter"></i> </i>
+
+            </ul>
+
+            <form class="form-inline my-2 my-lg-0 subnavbar">
+                <a class="nav-link text-dark  fa fa-user" asp-area="Identity" asp-page="/Account/Login">Login</a>
+                <a class="nav-link text-dark  fa fa-users" asp-area="Identity" asp-page="/Account/Register">Register</a>
+
+            </form>
+        </div>
+    </nav>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <img src="~/Images/9.jpg" height="100" alt="Ghar_Dailo_Logo" class="align-content-center" />
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#lolo" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse" id="lolo">
+                <partial name="_LoginPartial" />
+                <ul class="navbar-nav flex-grow-1 ml-4 nvb">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Service" asp-action="Index">Service</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Product" asp-action="Index">Product</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">About</a>
+                    </li>
+                </ul>
+                @*<div>
+                        <form action="/action_page.php" class="ml-5">
+                            <input type="text" placeholder="Search Ghardailo Product" name="search" class="   text-center srcbox">
+
+                        </form>
+                    </div>*@
+            </div>
+        </nav>
+    </header>
+
+
+
+
+    <div class="">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

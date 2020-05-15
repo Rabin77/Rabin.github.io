@@ -1,0 +1,54 @@
+﻿@model List<Ghardailo.Models.Product_Details>
+
+
+    <h1>Product List</h1>
+
+    <p>
+        <a asp-action="Create" class="btn btn-warning">Add New Product</a>
+    </p>
+    <div class="container-fluid">
+        <table class="table table-bordered">
+            <tr>
+                <th>Product Id</th>
+                <th>Category Name</th>
+                <th>Product Name</th>
+                <th>Product Price </th>
+                <th>Product Stock </th>
+                <th>Manufactur</th>
+                <th>Expire</th>
+                <th>Actions</th>
+            </tr>
+            @foreach (var bike in Model)
+        {
+            <tr>
+                <td>@bike.ProductId</td>
+                <td>@bike.CategoryName</td>
+                <td>@bike.ProductName</td>
+                <td>@bike.ProductPrice</td>
+                <td>@bike.Stock</td>
+                <td>@bike.Manufacture</td>
+                <td>@bike.Expire</td>
+
+
+
+                @*<td>
+                        @if (bike.ImageName != null)
+                        {
+                            <img src="~/Images/@bike.ImageName" class="img-fluid img-thumbnail" width="100" height="50" />
+                        }
+                        else
+                        {
+                            <img src="~/Images/bike-default.png" class="img-fluid img-thumbnail" width="100" height="50" />
+                        }
+                    </td>*@
+                <td>
+                    <a class="btn btn-warning" asp-controller="Product" asp-action="Details" asp-route-id="@bike.ProductId">View</a>
+                    <a class="btn btn-warning " asp-controller="Product" asp-action="Edit" asp-route-id="@bike.ProductId">Edit</a>
+                    <a class="btn btn-warning " asp-controller="Product" asp-action="Delete" asp-route-id="@bike.ProductId" onclick="return confirm('Are you sure you want to delete this data?');">Delete</a>
+                </td>
+            </tr>
+
+        }
+        </table>
+    </div>
+

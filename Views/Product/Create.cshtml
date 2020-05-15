@@ -1,0 +1,58 @@
+﻿@model Ghardailo.Models.Product_Details
+
+<link href="~/css/create.css" rel="stylesheet" />
+<h4 class="jumbotron text-center bg-primary text-white mt-0">Add Product On Ghardailo  </h4>
+<body>
+    <div class="row  justify-content-center">
+        <div class="col-md-6 card">
+            <div class="container">
+                <form method="post" asp-action="Create" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label asp-for="ProductName" class="control-label"></label>
+                        <input asp-for="ProductName" class="form-control" />
+                        <span class="text-danger" asp-validation-for="ProductName"></span>
+                    </div>
+                    <div class="form-group">
+                        <select asp-for="CategoryId" asp-items="ViewBag.CategoryList" class="form-control">
+                            <option value="">----Select Category----</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="ProductPrice" class="control-label"></label>
+                        <input asp-for="ProductPrice" class="form-control" />
+                        <span class="text-danger" asp-validation-for="ProductPrice"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Stock" class="control-label"></label>
+                        <input asp-for="Stock" class="form-control" />
+                        <span class="text-danger" asp-validation-for="Stock"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Manufacture" class="control-label"></label>
+                        <input asp-for="Manufacture" class="form-control" />
+                        <span class="text-danger" asp-validation-for="Manufacture"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Expire" class="control-label"></label>
+                        <input asp-for="Expire" class="form-control" />
+                        <span class="text-danger" asp-validation-for="Expire"></span>
+                    </div>
+                    <div class="form-group">
+                        <input asp-for="BikeImage" />
+                    </div>
+
+                    <div class="form-group">
+                        <input type="Submit" class="btn btn-primary" value="Create" />
+                        <a asp-action="Index" class="btn btn-danger">Cancel</a>
+                    </div>
+
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+</body>
